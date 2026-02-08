@@ -11,7 +11,7 @@
     <nav class="max-w-7xl px-5 md:fixed top-0 z-[98] w-screen backdrop-blur-md bg-[#121212] bg-opacity-80">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
         <button @click="redirectToHome" class="flex">
-          <span class="self-center text-lg text-[#22d3ee] font-semibold whitespace-nowrap fadein-bot hover:text-cyan-100">Djul Fikri Ferdiansyah</span>
+          <span class="self-center text-lg text-[#22d3ee] font-semibold whitespace-nowrap fadein-bot hover:text-cyan-100">PORTOFOLIO</span>
         </button>
         <div class="flex md:order-2 fadein-bot">
           <div class="w-10"></div>
@@ -57,7 +57,7 @@
   <nav class="flex justify-around py-4 text-xs">
     <router-link to="/" class="text-gray-300 hover:text-white">Home</router-link>
     <router-link to="/about" class="text-gray-300 hover:text-white">About</router-link>
-    <router-link to="/portfolio" class="text-gray-300 hover:text-white">Portfolio</router-link>
+    <router-link to="/portfolio" class="text-gray-300 hover:text-white">Portofolio</router-link>
     <router-link to="/blog" class="text-gray-300 hover:text-white">Blog</router-link>
     <router-link to="/contact" class="text-gray-300 hover:text-white">Contact</router-link>
   </nav>
@@ -124,9 +124,26 @@ body {
   overflow-x: hidden;
 }
 
-nav {
-  /* padding: 30px; */
+@keyframes fadeinBot {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
+
+.fadein-bot {
+  opacity: 0;
+  animation: fadeinBot 0.8s forwards;
+}
+
+.fadein-1 { animation-delay: 200ms; }
+.fadein-2 { animation-delay: 400ms; }
+.fadein-3 { animation-delay: 600ms; }
+.fadein-4 { animation-delay: 800ms; }
 
 nav a {
   font-weight: bold;

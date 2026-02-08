@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full md:w-3/5 h-20 mx-auto md:mt-5">
-        <div class="bg-white rounded-xl mx-3 p-5 md:p-10 md:mx-0">
+    <div class="w-full md:w-3/5 min-h-screen mx-auto md:mt-5 pb-20">
+        <div class="bg-white rounded-xl mx-3 p-5 md:p-10 md:mx-0 shadow-2xl">
             <div>
                 <h1 class="text-xl md:text-4xl text-black text-left font-bold leading-relaxed">{{ title }}</h1>
                 <div class="mt-3 text-left text-gray-800 text-sm">Published at <span>{{ date }}</span></div>
@@ -11,7 +11,7 @@
                     </svg>
                     <span>{{ readTime }} min read</span>
                 </div>
-                <div>
+                <div v-if="image">
                     <div class="relative w-full" style="padding-top: 50%;">
                         <img :src="image" class="absolute top-0 left-0 rounded-lg w-full h-full object-cover"
                             alt="Thumbnail">
@@ -20,13 +20,20 @@
                 <div class="text-left text-black mt-8 prose prose-slate max-w-none" v-html="renderedContent">
                     
                 </div>
+                <!-- Giscus Comments -->
+                <div class="mt-16 border-t border-gray-100 pt-10">
+                    <h3 class="text-2xl font-bold text-black mb-8">Comments</h3>
+                    <GiscusComponent />
+                </div>
             </div>
         </div>
     </div>
 </template>
+
 <script>
 import { useRoute } from 'vue-router';
 import { parseFrontmatter } from '@/utils/frontmatter.js';
+import GiscusComponent from '@/components/GiscusComponent.vue';
 import { marked } from 'marked';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github-dark.css';
@@ -43,6 +50,9 @@ marked.setOptions({
 });
 
 export default {
+    components: {
+        GiscusComponent
+    },
     data() {
         return {
             route: useRoute(),
@@ -58,7 +68,8 @@ export default {
     methods: {
         getDetails() {
             const slug = this.route.params.slug;
-            const modules = import.meta.glob('../content/blog/*.md', { as: 'raw', eager: true });
+            // Updated Vite glob syntax for raw text
+            const modules = import.meta.glob('../content/blog/*.md', { query: '?raw', import: 'default', eager: true });
             
             // Find the file that has the matching slug in its frontmatter
             for (const path in modules) {
@@ -89,3 +100,4 @@ export default {
 </script>
 
 <style scoped></style>
+ory

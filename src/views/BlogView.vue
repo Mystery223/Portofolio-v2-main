@@ -88,7 +88,7 @@ export default {
   },
   methods: {
     getArticles() {
-      const modules = import.meta.glob('../content/blog/*.md', { as: 'raw', eager: true });
+      const modules = import.meta.glob('../content/blog/*.md', { query: '?raw', import: 'default', eager: true });
       const articles = Object.keys(modules).map((path, index) => {
         const rawContent = modules[path];
         const { data, content } = parseFrontmatter(rawContent);
