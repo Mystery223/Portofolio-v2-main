@@ -1,0 +1,39 @@
+
+import re
+import os
+
+filepath = 'src/views/AboutView.vue'
+if not os.path.exists(filepath):
+    print(f"File {filepath} not found")
+    exit(1)
+
+with open(filepath, 'r') as f:
+    content = f.read()
+
+# Replace Header
+header_old = r'About Me &nbsp;'
+header_new = r'<span class="italic text-primary uppercase">Cerita Di Balik</span>&nbsp;<span class="italic uppercase">Setiap Kode</span> &nbsp;'
+content = content.replace(header_old, header_new)
+
+# Replace Paragraphs
+pattern = re.compile(r'<div class="md:w-7/12">.*?</div>', re.DOTALL)
+replacement = """<div class="md:w-7/12">
+          <p class="mb-3 md:mb-7 fadein-left fadeins-1 text-slate-300">
+            Halo! Saya adalah seorang pengembang yang percaya bahwa teknologi
+            terbaik adalah jenis teknologi yang memiliki 'jiwa'.
+          </p>
+          <p class="mb-3 md:mb-7 fadein-left fadeins-2 text-slate-300">
+            Ketertarikan saya pada dunia digital dimulai dengan rasa ingin tahu yang sederhana: bagaimana semuanya bekerja? Percikan pertanyaan itulah yang membawa saya ke karier saya saat ini—mengubah masalah kompleks menjadi solusi yang elegan. Bagi saya, kode lebih dari sekadar baris instruksi; kode adalah instrumen untuk menciptakan pengalaman pengguna yang bermakna.
+          </p>
+          <p class="mb-3 fadein-left fadeins-3 text-slate-300">
+            Mulai dari membangun platform e-commerce skala besar hingga merancang blog pribadi yang minimalis, fokus saya tetap sama: perhatian yang teliti terhadap detail dan komitmen terhadap kualitas. Saya tidak hanya membangun produk; saya membangun pengalaman yang tak terlupakan.
+          </p>
+        </div>"""
+
+content = pattern.sub(replacement, content)
+
+with open(filepath, 'w') as f:
+    f.write(content)
+
+print("Success")
+ory

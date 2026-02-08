@@ -1,0 +1,29 @@
+import os
+
+def translate_file(filepath, mapping):
+    with open(filepath, 'r') as f:
+        content = f.read()
+    
+    for old, new in mapping.items():
+        content = content.replace(old, new)
+        
+    with open(filepath, 'w') as f:
+        f.write(content)
+
+about_mapping = {
+    "Cerita Di Balik": "The Story Behind",
+    "Setiap Kode": "Every Code",
+    "Halo! Saya adalah seorang pengembang": "Hello! I am a developer",
+    "percaya bahwa teknologi terbaik adalah jenis teknologi yang memiliki": "who believes that the best kind of technology is the one that possesses",
+    "'jiwa'": "'soul'",
+    "Ketertarikan saya pada dunia digital dimulai dengan rasa ingin tahu yang sederhana: <span class=\"italic text-white/90\">bagaimana semuanya bekerja?</span> Percikan pertanyaan itulah yang membawa saya ke karier saya saat ini—mengubah masalah kompleks menjadi solusi yang elegan. Bagi saya, kode lebih dari sekadar baris instruksi; kode adalah instrumen untuk menciptakan pengalaman pengguna yang bermakna.": "My fascination with the digital world began with a simple curiosity: <span class=\"italic text-white/90\">how does it all work?</span> That spark of inquiry is what led me to my current career—transforming complex problems into elegant solutions. To me, code is more than just lines of instructions; it is an instrument for creating meaningful user experiences.",
+    "Mulai dari membangun platform skala besar hingga merancang blog pribadi yang minimalis, fokus saya tetap sama: perhatian yang teliti terhadap detail dan komitmen terhadap kualitas. <span class=\"text-white font-semibold\">Saya tidak hanya membangun produk; saya membangun pengalaman yang tak terlupakan.</span>": "From building large-scale platforms to designing minimalist personal blogs, my focus remains the same: meticulous attention to detail and a commitment to quality. <span class=\"text-white font-semibold\">I don't just build products; I build unforgettable experiences.</span>"
+}
+
+home_mapping = {
+    "Tautan CV akan segera hadir! Hubungi saya di menu <b>Contact</b> untuk saat ini.": "CV link coming soon! Please reach out to me via the <b>Contact</b> menu for now."
+}
+
+translate_file("src/views/AboutView.vue", about_mapping)
+translate_file("src/views/HomeView.vue", home_mapping)
+ory
