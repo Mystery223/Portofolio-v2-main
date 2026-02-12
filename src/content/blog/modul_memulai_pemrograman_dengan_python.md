@@ -1,12 +1,12 @@
 ---
 title: "Memulai Pemrograman dengan Python untuk Pemula"
-date: 2026-02-10
-author: Djul Fikri Ferdiansyah
-categories: [Python, Pemrograman, Tutorial]
-tags: [python, pemrograman, pemula]
+date: "Feb 10, 2026"
+desc: "Pelajari dasar-dasar pemrograman Python dari nol secara bertahap dan praktis untuk pemula."
+image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+slug: "memulai-pemrograman-dengan-python"
 ---
 
-# Memulai Pemrograman dengan Python untuk Pemula 🐍
+# Memulai Pemrograman dengan Python untuk Pemula.
 
 Python adalah bahasa pemrograman yang sering dijuluki *ramah manusia*. Sintaksnya bersih, mudah dibaca, dan tidak membuat dahi berkerut sejak baris pertama. Karena itulah Python menjadi pilihan utama bagi pemula yang ingin menapaki dunia pemrograman, sekaligus andalan profesional di bidang data science, web, hingga kecerdasan buatan.
 

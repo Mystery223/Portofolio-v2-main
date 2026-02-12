@@ -106,116 +106,118 @@ export default {
 }
 </script>
 <template>
-  <div
-    class="bg-[#1e1e1f] px-5 py-5 md:px-12 md:py-16 text-left border border-[#383838] rounded-3xl text-primary mx-3 mb-5 overflow-hidden">
-    <article data-page="about">
+  <div>
+    <div
+      class="bg-[#1e1e1f] px-5 py-5 md:px-12 md:py-16 text-left border border-[#383838] rounded-3xl text-primary mx-3 mb-5 overflow-hidden">
+      <article data-page="about">
 
-      <header>
-        <div class="text-2xl font-bold text-white mb-10 fadein-bot title-section flex items-center">
-          About Me &nbsp;
-          <div class="h-[1px] w-32 bg-primary md:w-96"
-            data-aos-duration="600"></div>
-        </div>
-      </header>
-
-      <section
-        class="flex flex-col md:flex-row items-center justify-center md:gap-16 gap-10">
-        <div class="flex-shrink-0">
-          <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-            <img class="relative w-[180px] h-[180px] md:w-[240px] md:h-[240px] object-cover rounded-full border-2 border-primary fadein-up shadow-2xl shadow-primary/20"
-              src="/img/Profile.png" alt="Foto">
+        <header>
+          <div class="text-2xl font-bold text-white mb-10 fadein-bot title-section flex items-center">
+            About Me &nbsp;
+            <div class="h-[1px] w-32 bg-primary md:w-96"
+              data-aos-duration="600"></div>
           </div>
-        </div>
-        <div class="md:w-8/12 border-l-0 md:border-l-2 border-primary/20 md:pl-10 relative">
-          <h2 class="text-xl md:text-3xl font-bold text-white mb-6 fadein-left fadeins-1 italic tracking-tight">
-            <span class="text-primary uppercase drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">The Story Behind</span>
-            <span class="uppercase ml-2">Every Code</span>
-          </h2>
-          <div class="space-y-4 md:space-y-6 text-sm md:text-base lg:text-lg leading-relaxed text-slate-300">
-            <p class="fadein-left fadeins-1">
-              Hello! I am a developer who believes that the best kind of technology
-              is the one that possesses <span class="text-primary font-medium">'soul'</span>.
-            </p>
-            <p class="fadein-left fadeins-2">
-              My fascination with the digital world began with a simple curiosity: <span class="italic text-white/90">how does it all work?</span> That spark of inquiry is what led me to my current career—transforming complex problems into elegant solutions. To me, code is more than just lines of instructions; it is an instrument for creating meaningful user experiences.
-            </p>
-            <p class="fadein-left fadeins-3">
-              From building large-scale platforms to designing minimalist personal blogs, my focus remains the same: meticulous attention to detail and a commitment to quality. <span class="text-white font-semibold">I don't just build products; I build unforgettable experiences.</span>
-            </p>
+        </header>
+
+        <section
+          class="flex flex-col md:flex-row items-center justify-center md:gap-16 gap-10">
+          <div class="flex-shrink-0">
+            <div class="relative group">
+              <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <img class="relative w-[180px] h-[180px] md:w-[240px] md:h-[240px] object-cover rounded-full border-2 border-primary fadein-up shadow-2xl shadow-primary/20"
+                src="/img/Profile.png" alt="Foto">
+            </div>
           </div>
-        </div>
-      </section>
+          <div class="md:w-8/12 border-l-0 md:border-l-2 border-primary/20 md:pl-10 relative">
+            <h2 class="text-xl md:text-3xl font-bold text-white mb-6 fadein-left fadeins-1 italic tracking-tight">
+              <span class="text-primary uppercase drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">The Story Behind</span>
+              <span class="uppercase ml-2">Every Code</span>
+            </h2>
+            <div class="space-y-4 md:space-y-6 text-sm md:text-base lg:text-lg leading-relaxed text-slate-300">
+              <p class="fadein-left fadeins-1">
+                Hello! I am a developer who believes that the best kind of technology
+                is the one that possesses <span class="text-primary font-medium">'soul'</span>.
+              </p>
+              <p class="fadein-left fadeins-2">
+                My fascination with the digital world began with a simple curiosity: <span class="italic text-white/90">how does it all work?</span> That spark of inquiry is what led me to my current career—transforming complex problems into elegant solutions. To me, code is more than just lines of instructions; it is an instrument for creating meaningful user experiences.
+              </p>
+              <p class="fadein-left fadeins-3">
+                From building large-scale platforms to designing minimalist personal blogs, my focus remains the same: meticulous attention to detail and a commitment to quality. <span class="text-white font-semibold">I don't just build products; I build unforgettable experiences.</span>
+              </p>
+            </div>
+          </div>
+        </section>
 
-    </article>
-  </div>
+      </article>
+    </div>
 
-  <div class="px-5 py-5 md:px-12 md:py-10 text-left text-primary mx-3">
-    <article data-page="about">
-      <header>
-        <div class="text-2xl font-bold text-white mb-5 fadein-bot title-section flex items-center">
-          <div class="h-[1px] w-10 bg-primary md:w-20"
-            data-aos-duration="600"></div>
-          &nbsp; Skills
-        </div>
-      </header>
-      <section>
-        <div>
-          <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400 mb-5">
-            <li class="mr-2">
-              <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
-                :class="{ 'text-primary bg-primary bg-opacity-10': activeTab === 1 }" @click="activeTab = 1">Tech Stack</button>
-            </li>
-            <li class="mr-2">
-              <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
-                :class="{ 'text-primary bg-primary bg-opacity-10': activeTab === 2 }" @click="activeTab = 2">Tools</button>
-            </li>
-          </ul>
-        </div>
-        <div v-show="activeTab === 1">
-          <div class="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
-            <div v-for="item in tech" :key="item.id">
-              <div
-                class="item-tech flex cursor-pointer items-center gap-2 rounded border border-primary px-2 py-2 hover:bg-primary hover:bg-opacity-10 md:gap-3 lg:px-3">
-                <div class="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">
-                  <img alt="HTML" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-                    class="img-tech drop-shadow-xl transition-all duration-300 h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]  "
-                    :src="item.imageUrl" style="color: transparent;">
-                </div>
-                <div class="flex items-center text-sm md:text-base lg:text-lg">
-                  <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name }}
+    <div class="px-5 py-5 md:px-12 md:py-10 text-left text-primary mx-3">
+      <article data-page="about">
+        <header>
+          <div class="text-2xl font-bold text-white mb-5 fadein-bot title-section flex items-center">
+            <div class="h-[1px] w-10 bg-primary md:w-20"
+              data-aos-duration="600"></div>
+            &nbsp; Skills
+          </div>
+        </header>
+        <section>
+          <div>
+            <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400 mb-5">
+              <li class="mr-2">
+                <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
+                  :class="{ 'text-primary bg-primary bg-opacity-10': activeTab === 1 }" @click="activeTab = 1">Tech Stack</button>
+              </li>
+              <li class="mr-2">
+                <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
+                  :class="{ 'text-primary bg-primary bg-opacity-10': activeTab === 2 }" @click="activeTab = 2">Tools</button>
+              </li>
+            </ul>
+          </div>
+          <div v-show="activeTab === 1">
+            <div class="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
+              <div v-for="item in tech" :key="item.id">
+                <div
+                  class="item-tech flex cursor-pointer items-center gap-2 rounded border border-primary px-2 py-2 hover:bg-primary hover:bg-opacity-10 md:gap-3 lg:px-3">
+                  <div class="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">
+                    <img alt="HTML" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
+                      class="img-tech drop-shadow-xl transition-all duration-300 h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]  "
+                      :src="item.imageUrl" style="color: transparent;">
                   </div>
-                  <div
-                    class="status-tech opacity-0 absolute mt-5 text-[10px] text-primary transition-all duration-300 md:text-xs lg:text-sm">
-                    {{ item.status }}</div>
+                  <div class="flex items-center text-sm md:text-base lg:text-lg">
+                    <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name }}
+                    </div>
+                    <div
+                      class="status-tech opacity-0 absolute mt-5 text-[10px] text-primary transition-all duration-300 md:text-xs lg:text-sm">
+                      {{ item.status }}</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div v-show="activeTab === 2">
-          <div class="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
-            <div v-for="item in tools" :key="item.id">
-              <div
-                class="item-tech flex cursor-pointer items-center gap-2 rounded border border-primary px-2 py-2 hover:bg-primary hover:bg-opacity-10 md:gap-3 lg:px-3">
-                <div class="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">
-                  <img alt="HTML" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-                    class="img-tech drop-shadow-xl transition-all duration-300 h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]  "
-                    :src="item.imageUrl" style="color: transparent;">
-                </div>
-                <div class="flex items-center text-sm md:text-base lg:text-lg">
-                  <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name }}
+          <div v-show="activeTab === 2">
+            <div class="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
+              <div v-for="item in tools" :key="item.id">
+                <div
+                  class="item-tech flex cursor-pointer items-center gap-2 rounded border border-primary px-2 py-2 hover:bg-primary hover:bg-opacity-10 md:gap-3 lg:px-3">
+                  <div class="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">
+                    <img alt="HTML" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
+                      class="img-tech drop-shadow-xl transition-all duration-300 h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]  "
+                      :src="item.imageUrl" style="color: transparent;">
                   </div>
-                  <div
-                    class="status-tech opacity-0 absolute mt-5 text-[10px] text-primary transition-all duration-300 md:text-xs lg:text-sm">
-                    {{ item.status }}</div>
+                  <div class="flex items-center text-sm md:text-base lg:text-lg">
+                    <div class="tech font-medium text-secondary transition-all duration-300 translate-y-0 ">{{ item.name }}
+                    </div>
+                    <div
+                      class="status-tech opacity-0 absolute mt-5 text-[10px] text-primary transition-all duration-300 md:text-xs lg:text-sm">
+                      {{ item.status }}</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </article>
+        </section>
+      </article>
+    </div>
   </div>
 </template>
 
