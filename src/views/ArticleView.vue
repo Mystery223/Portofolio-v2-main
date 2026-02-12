@@ -35,8 +35,20 @@ import { useRoute } from 'vue-router';
 import { parseFrontmatter } from '@/utils/frontmatter.js';
 import GiscusComponent from '@/components/GiscusComponent.vue';
 import { marked } from 'marked';
-import hljs from 'highlight.js';
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
+import python from 'highlight.js/lib/languages/python';
+import xml from 'highlight.js/lib/languages/xml';
+import css from 'highlight.js/lib/languages/css';
+import bash from 'highlight.js/lib/languages/bash';
 import 'highlight.js/styles/github-dark.css';
+
+// Register languages
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('python', python);
+hljs.registerLanguage('xml', xml);
+hljs.registerLanguage('css', css);
+hljs.registerLanguage('bash', bash);
 
 // Configure marked with highlight.js
 marked.setOptions({
