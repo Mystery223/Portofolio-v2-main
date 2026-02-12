@@ -45,7 +45,6 @@ export default {
       <header>
         <div
           class="text-2xl font-bold text-white mb-10 fadein-bot title-section flex items-center justify-center flex-col">
-          <!-- <div class="h-[1px] w-10 bg-amber-200 md:w-20 aos-init aos-animate"></div> -->
           <h4>Past Project Experience</h4>
           <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-primary">
             Explore the projects I've worked on so far</h4>
@@ -119,8 +118,8 @@ svg:hover{
   }
 }
 
-/* Menggunakan animasi pada elemen yang diinginkan */
 .fade-zoom-in {
-  animation: fadeZoomIn 1s ease-in-out;
+  opacity: 0;
+  animation: fadeZoomIn 1s ease-in-out forwards;
 }
 </style>

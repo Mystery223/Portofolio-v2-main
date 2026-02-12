@@ -149,15 +149,15 @@ body {
 .fadein-up {
   opacity: 0;
   animation-name: fadeInUp;
-  animation-duration: 0.8s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: 200ms;
+  animation-delay: 100ms;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 20px, 0);
   }
   to {
     opacity: 1;
@@ -167,14 +167,14 @@ body {
 
 .fade-in-from-left {
   opacity: 0;
-  animation: fadeInLeft 0.8s ease-out forwards;
-  animation-delay: 400ms;
+  animation: fadeInLeft 0.5s ease-out forwards;
+  animation-delay: 200ms;
 }
 
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-20px);
   }
   100% {
     opacity: 1;
@@ -184,14 +184,14 @@ body {
 
 .fadein-right {
   opacity: 0;
-  animation: fadeInRight 0.8s ease-out forwards;
-  animation-delay: 200ms;
+  animation: fadeInRight 0.5s ease-out forwards;
+  animation-delay: 100ms;
 }
 
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(20px);
   }
   100% {
     opacity: 1;
@@ -200,6 +200,6 @@ body {
 }
 
 .animation-delay-500 {
-  animation-delay: 500ms;
+  animation-delay: 300ms;
 }
 </style>ory

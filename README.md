@@ -1,24 +1,45 @@
-# portofolio-v2
+# Portofolio v2 - Djul Fikri Ferdiansyah
 
-## Project setup
-```
+Personal portfolio website built with Vue.js 3, Vite, and Tailwind CSS. This project showcases my journey as a Fullstack Developer, featuring past project experiences, blog articles, and a professional contact interface.
+
+## 🚀 Live Demo
+**[https://portofolio-v2-main-theta.vercel.app/](https://portofolio-v2-main-theta.vercel.app/)**
+
+## 🛡️ Deployment Verification
+The project has been successfully deployed and verified on Vercel.
+
+- **Status**: ✅ Live & Functional
+- **Browser Compatibility**: Optimized for modern browsers.
+- **Responsiveness**: Fully responsive (Mobile & Desktop).
+- **Console Errors**: 0 errors found.
+
+### Key Pages
+- **Home**: Dynamic welcome page with typing animation.
+- **About**: Personal background and technical skill visualization.
+- **Portfolio**: Interactive grid of past work experiences.
+- **Blog**: MD-based article rendering with read-time estimation.
+- **Contact**: Functional form for professional inquiries.
+
+## 💻 Tech Stack
+- **Frontend**: Vue.js 3, Tailwind CSS
+- **Build Tool**: Vite
+- **Dependencies**: EmailJS, Axios, SweetAlert2
+- **Deployment**: Vercel
+
+## 🛠️ Project Setup
+```bash
+# Install dependencies
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Compiles and hot-reloads for development
+npm run dev
 
-### Compiles and minifies for production
-```
+# Compiles and minifies for production
 npm run build
+
+# Preview production build
+npm run preview
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 📝 License
+Created by **Djul Fikri Ferdiansyah**. Feel free to explore and connect!

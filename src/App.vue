@@ -1,7 +1,5 @@
 <template>
-  <!-- component -->
   <div class="max-w-7xl mx-auto flex flex-col relative min-h-screen">
-    <!-- Animated Background Blobs -->
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
       <div class="absolute top-[10%] left-[20%] w-[300px] h-[300px] bg-primary/10 rounded-full blur-[120px] animate-blob"></div>
       <div class="absolute top-[40%] right-[10%] w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[150px] animate-blob animation-delay-2000"></div>
@@ -29,7 +27,7 @@
             </li>
             <li>
               <router-link to="/portfolio"
-                class="fadein-bot fadein-2 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Portfolio</router-link>
+                class="fadein-bot fadein-2 text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-gray-500 md:p-0">Portofolio</router-link>
             </li>
             <li>
               <router-link to="/blog"
@@ -63,7 +61,6 @@
   </nav>
 </footer>
 
-  <!-- Floating Social Sidebar -->
   <div class="fixed bottom-0 left-0 hidden md:flex flex-col items-center gap-6 px-10 after:content-[''] after:w-[1px] after:h-24 after:bg-slate-500 z-50">
     <a href="https://github.com/Mystery223" target="_blank" class="text-slate-400 hover:text-primary hover:-translate-y-1 transition-all duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -97,8 +94,8 @@ export default {
 }
 
 ::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -137,7 +134,7 @@ body {
 
 .fadein-bot {
   opacity: 0;
-  animation: fadeinBot 0.8s forwards;
+  animation: fadeinBot 0.5s forwards;
 }
 
 .fadein-1 { animation-delay: 200ms; }
@@ -172,7 +169,6 @@ nav a.router-link-exact-active:hover {
   color: white;
 }
 
-/* Page Transitions */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -188,7 +184,6 @@ nav a.router-link-exact-active:hover {
   transform: translateY(-10px);
 }
 
-/* Background Animation */
 @keyframes blob {
   0% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(30px, -50px) scale(1.1); }

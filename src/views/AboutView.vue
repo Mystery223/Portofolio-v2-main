@@ -113,7 +113,7 @@ export default {
       <header>
         <div class="text-2xl font-bold text-white mb-10 fadein-bot title-section flex items-center">
           About Me &nbsp;
-          <div class="h-[1px] w-32 bg-primary md:w-96 aos-init aos-animate" data-aos="zoom-in-left"
+          <div class="h-[1px] w-32 bg-primary md:w-96"
             data-aos-duration="600"></div>
         </div>
       </header>
@@ -124,7 +124,7 @@ export default {
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <img class="relative w-[180px] h-[180px] md:w-[240px] md:h-[240px] object-cover rounded-full border-2 border-primary fadein-up shadow-2xl shadow-primary/20"
-              src="/img/Profile.jpg" alt="Foto">
+              src="/img/Profile.png" alt="Foto">
           </div>
         </div>
         <div class="md:w-8/12 border-l-0 md:border-l-2 border-primary/20 md:pl-10 relative">
@@ -154,7 +154,7 @@ export default {
     <article data-page="about">
       <header>
         <div class="text-2xl font-bold text-white mb-5 fadein-bot title-section flex items-center">
-          <div class="h-[1px] w-10 bg-primary md:w-20 aos-init aos-animate" data-aos="zoom-in-left"
+          <div class="h-[1px] w-10 bg-primary md:w-20"
             data-aos-duration="600"></div>
           &nbsp; Skills
         </div>
@@ -215,24 +215,6 @@ export default {
           </div>
         </div>
       </section>
-
-      <section class="fadein-left fadeins-2 mt-10">
-        <div class="flex items-center gap-2 mb-6">
-          <div class="h-[2px] w-10 bg-primary"></div>
-          <h2 class="text-2xl font-bold text-white">Connect with Me</h2>
-        </div>
-        <div class="flex gap-6 mt-4">
-          <a href="https://github.com/Mystery223" target="_blank" class="text-slate-400 hover:text-primary transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          </a>
-          <a href="https://instagram.com/mamang.fikriii" target="_blank" class="text-slate-400 hover:text-primary transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-          </a>
-          <a href="https://www.tiktok.com/@mamang.fikriii" target="_blank" class="text-slate-400 hover:text-primary transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tiktok"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
-          </a>
-        </div>
-      </section>
     </article>
   </div>
 </template>
@@ -256,15 +238,15 @@ export default {
 }
 
 .fadeins-1 {
-  animation-delay: 500ms;
+  animation-delay: 200ms;
 }
 
 .fadeins-2 {
-  animation-delay: 800ms;
+  animation-delay: 400ms;
 }
 
 .fadeins-3 {
-  animation-delay: 1100ms;
+  animation-delay: 600ms;
 }
 
 .img-tech,

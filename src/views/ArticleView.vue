@@ -4,7 +4,7 @@
             <div>
                 <h1 class="text-xl md:text-4xl text-black text-left font-bold leading-relaxed">{{ title }}</h1>
                 <div class="mt-3 text-left text-gray-800 text-sm">Published at <span>{{ date }}</span></div>
-                <div class="h-[2px] w-20 my-5 md:my-10 bg-primary md:w-1/3 aos-init aos-animate mr-2"></div>
+                <div class="h-[2px] w-20 my-5 md:my-10 bg-primary md:w-1/3 mr-2"></div>
                 <div class="flex items-center text-sm text-gray-500 gap-2 mb-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />

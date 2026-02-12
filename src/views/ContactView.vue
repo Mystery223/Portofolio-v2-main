@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     async sendEmail() {
-      // Validate form
       if (!this.form.name || !this.form.email || !this.form.message) {
         this.error = 'Please fill in all fields.';
         return;
@@ -29,11 +28,6 @@ export default {
       this.error = null;
 
       try {
-        // EmailJS configuration
-        // User needs to set up at https://emailjs.com
-        // 1. Create account and add email service
-        // 2. Create email template with variables: from_name, from_email, message
-        // 3. Get Service ID, Template ID, and Public Key
         await emailjs.send(
           'service_hvekyq5',
           'template_snmtzvi',
@@ -50,7 +44,6 @@ export default {
         this.isSent = true;
         this.form = { name: '', email: '', message: '' };
       } catch (err) {
-        // More descriptive error handling
         if (err && err.text) {
           this.error = `Error: ${err.text}. Please check your credentials.`;
         } else {
@@ -72,14 +65,12 @@ export default {
 <template>
   <div class="container mx-auto p-3 md:p-8">
     <div class="max-w-2xl mx-auto">
-      <!-- Header -->
       <div class="text-center mb-10">
         <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h1>
         <p class="text-slate-400">Have a question or want to work together? Feel free to reach out!</p>
         <div class="h-[2px] w-20 mx-auto mt-6 bg-primary"></div>
       </div>
 
-      <!-- Success Message -->
       <div v-if="isSent" class="bg-green-900/30 border border-green-500 rounded-xl p-8 text-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 mx-auto text-green-400 mb-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -91,14 +82,10 @@ export default {
         </button>
       </div>
 
-      <!-- Contact Form -->
       <form v-else @submit.prevent="sendEmail" class="bg-[#1e1e1f] border border-[#383838] rounded-xl p-6 md:p-8">
-        <!-- Error Message -->
         <div v-if="error" class="bg-red-900/30 border border-red-500 rounded-lg p-4 mb-6 text-red-400">
           {{ error }}
         </div>
-
-        <!-- Name Field -->
         <div class="mb-6">
           <label for="name" class="block text-slate-300 text-sm font-medium mb-2">Your Name</label>
           <input 
@@ -110,7 +97,6 @@ export default {
           >
         </div>
 
-        <!-- Email Field -->
         <div class="mb-6">
           <label for="email" class="block text-slate-300 text-sm font-medium mb-2">Your Email</label>
           <input 
@@ -122,7 +108,6 @@ export default {
           >
         </div>
 
-        <!-- Message Field -->
         <div class="mb-6">
           <label for="message" class="block text-slate-300 text-sm font-medium mb-2">Message</label>
           <textarea 
@@ -134,7 +119,6 @@ export default {
           ></textarea>
         </div>
 
-        <!-- Submit Button -->
         <button 
           type="submit"
           :disabled="isLoading"
@@ -149,7 +133,6 @@ export default {
       </form>
 
       <div class="mt-8 text-center text-slate-400">
-        <!-- Social Icons for Mobile -->
         <div class="flex md:hidden justify-center gap-6 mt-8">
           <a href="https://github.com/Mystery223" target="_blank" class="text-slate-400 hover:text-primary transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
