@@ -31,7 +31,7 @@
       <div class="relative group">
         <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
         <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-          class="relative w-[220px] h-[220px] md:w-[320px] md:h-[320px] object-cover rounded-full border-4 border-[#121212] pict" src="/img/Profile.jpg">
+          class="relative w-[220px] h-[220px] md:w-[320px] md:h-[320px] object-cover rounded-full border-4 border-[#121212] pict" src="/img/Profile.png">
       </div>
     </div>
   </main>
