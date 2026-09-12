@@ -2,7 +2,7 @@
 module.exports = {
   content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'media',
   theme: {
     accentColor: ({ theme }) => ({
       ...theme('colors'),
@@ -10,8 +10,8 @@ module.exports = {
     }),
     extend: {
       colors: {
-        'primary': '#22d3ee', // cyan-400
-        'secondary': '#8b5cf6', // violet-500
+        'primary': '#22d3ee', 
+        'secondary': '#8b5cf6',
         'yellow-crayola': 'hsl(45, 100%, 72%)'
       }
     },
@@ -994,8 +994,5 @@ module.exports = {
       50: '50',
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
 }
 

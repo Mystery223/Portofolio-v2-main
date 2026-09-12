@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://djulferdiansyah.com/sitemap.xml
+Sitemap: https://djul-dev.vercel.app/sitemap.xml

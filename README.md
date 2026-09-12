@@ -1,9 +1,9 @@
 # Portofolio v2 - Djul Fikri Ferdiansyah
 
-Personal portfolio website built with Vue.js 3, Vite, and Tailwind CSS. This project showcases my journey as a Fullstack Developer, featuring past project experiences, blog articles, and a professional contact interface.
+Personal portfolio website built with Vue.js 3, Vite, and Tailwind CSS. This project showcases my journey as a Fullstack Developer, featuring past project experiences and a professional contact interface.
 
 ## 🚀 Live Demo
-**[https://portofolio-v2-main-theta.vercel.app/](https://portofolio-v2-main-theta.vercel.app/)**
+**[https://djul-dev.vercel.app/](https://djul-dev.vercel.app/)**
 
 ## 🛡️ Deployment Verification
 The project has been successfully deployed and verified on Vercel.
@@ -17,7 +17,6 @@ The project has been successfully deployed and verified on Vercel.
 - **Home**: Dynamic welcome page with typing animation.
 - **About**: Personal background and technical skill visualization.
 - **Portfolio**: Interactive grid of past work experiences.
-- **Blog**: MD-based article rendering with read-time estimation.
 - **Contact**: Functional form for professional inquiries.
 
 ## 💻 Tech Stack

@@ -12,12 +12,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@unhead/vue": "^2.1.4",
+    "@vercel/analytics": "^2.0.1",
     "axios": "^1.4.0",
     "core-js": "^3.8.3",
-    "gray-matter": "^4.0.3",
-    "highlight.js": "^11.11.1",
-    "marked": "^17.0.1",
     "sweetalert2": "^11.26.18",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
@@ -25,7 +22,6 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
-    "@tailwindcss/typography": "^0.5.19",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
