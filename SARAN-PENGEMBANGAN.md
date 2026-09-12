@@ -61,17 +61,18 @@ SPA Vue hampir pasti lemah di SEO. Yang sudah dikerjakan:
 - [ ] Link GitHub & LinkedIn yang mencolok
 - [ ] Testimoni singkat dari rekan kerja/dosen/mentor (1–2 saja sudah berdampak)
 
-### 6. ✅ Vercel Analytics — *KODE SELESAI, TINGGAL AKTIFKAN DI DASHBOARD*
-Manfaat: tahu jumlah pengunjung, halaman terpopuler, referrer (dari mana pengunjung datang) — gratis, tanpa cookie, GDPR-compliant.
-- [x] **Kode:** `@vercel/analytics@^2.0.1` terpasang, `inject()` dipanggil di `src/main.js`
-- [x] **Build terverifikasi** — tambahan bundle hanya ~2 kB (script tracking di-load dari edge Vercel saat runtime)
-- [x] Route change SPA otomatis terlacak (script memantau History API vue-router)
-- [x] Otomatis **nonaktif di localhost** — data hanya terkumpul di production
-- [ ] **LANGKAH ANDA di dashboard Vercel (wajib, sekali saja):**
-  1. Buka [vercel.com/dashboard](https://vercel.com/dashboard) → pilih proyek portfolio
-  2. Tab **Analytics** → klik tombol **Enable** (gratis, Hobby plan mendukung)
-  3. Setelah deploy berikutnya, data mulai terkumpul; lihat di tab **Analytics** (biasanya butuh beberapa jam sampai grafik muncul)
-- **Bonus opsional:** `@vercel/speed-insights` (metrik performa Lighthouse nyata dari pengunjung) — bisa dipasang belakangan dengan pola yang sama.
+### 6. ✅ Analytics (Cloudflare Web Analytics) — *KODE TERPASANG, TINGGAL ISI TOKEN*
+> **Keputusan:** Vercel Analytics di-skip karena dashboard meminta pembayaran saat aktivasi → beralih ke **Cloudflare Web Analytics** yang **100% gratis selamanya**, tanpa cookie, GDPR-compliant.
+- [x] `@vercel/analytics` dihapus dari `src/main.js` + `package.json` (diputuskan tidak dipakai)
+- [x] Script beacon Cloudflare terpasang di `index.html` (chunk vendor kembali ramping)
+- [x] Fitur yang didapat: page views, top pages, referrer, negara, perangkat — via dashboard Cloudflare
+- [ ] **LANGKAH ANDA (dapatkan token, ±5 menit):**
+  1. Daftar/login gratis di [dash.cloudflare.com](https://dash.cloudflare.com) (tidak perlu punya domain di Cloudflare)
+  2. Menu kiri: **Analytics & Logs → Web Analytics** (atau "RUM") → **Add a site**
+  3. Masukkan `djul-dev.vercel.app` → Cloudflare menampilkan **JS snippet berisi token**
+  4. Copy token-nya, lalu ganti tulisan `GANTI_DENGAN_TOKEN_CLOUDFLARE` di file `index.html` (baris ~45)
+  5. Commit & push → data mulai terkumpul, lihat di dashboard Cloudflare
+- **Catatan:** Beacon menampilkan data pengunjung nyata termasuk kecepatan site dari sisi pengunjung. Tidak memperlambat website (script `defer`, ~1 kB).
 
 ---
 
@@ -103,7 +104,7 @@ Manfaat: tahu jumlah pengunjung, halaman terpopuler, referrer (dari mana pengunj
 2. Download CV           ← ⏸️ DITUNDA — keputusan: aman demi keamanan data; opsi A+B saat siap
 3. Meta tags / OG        ← ✅ SELESAI
 4. Pembenahan Portfolio  ← ⏸️ DITUNDA — menunggu aset visual (screenshot) dari Anda
-5. Analytics             ← ✅ KODE SELESAI — tinggal klik "Enable" di dashboard Vercel
+5. Analytics             ← ✅ Cloudflare (gratis) — tinggal isi token dari dashboard Cloudflare
 ```
 
 ## 🗒️ Log Perubahan
@@ -115,7 +116,7 @@ Manfaat: tahu jumlah pengunjung, halaman terpopuler, referrer (dari mana pengunj
 | - | #1 Download CV | ⏸️ Ditunda (keputusan: keamanan data; opsi A+B saat siap) |
 | - | #3 SEO & Meta tags | ✅ Selesai (`index.html`, `router/index.js`, `robots.txt`, `sitemap.xml`) |
 | - | Domain final dikonfirmasi: `https://djul-dev.vercel.app/` | ✅ Semua 13 referensi (5 file) diganti dari domain lama; README Live Demo ikut diperbarui |
-| - | #5 Vercel Analytics | ✅ Kode selesai (`src/main.js` + `@vercel/analytics`) — menunggu klik "Enable" di dashboard Vercel |
+| - | #5 Analytics | ✅ Beralih ke Cloudflare Web Analytics (gratis) — beacon terpasang, menunggu token dari Anda |
 | - | Icon LinkedIn | ✅ Ditambahkan di sidebar social desktop (`App.vue`) + baris social halaman Contact (`ContactView.vue`), mengarah ke profil LinkedIn pribadi — diposisikan paling depan |
 | - | #4 Konten Portfolio | ⏸️ Ditunda — menunggu aset visual dari pemilik |
 | - | #6 Analytics | ⬜ Belum |
