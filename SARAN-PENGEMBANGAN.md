@@ -66,13 +66,9 @@ SPA Vue hampir pasti lemah di SEO. Yang sudah dikerjakan:
 - [x] `@vercel/analytics` dihapus dari `src/main.js` + `package.json` (diputuskan tidak dipakai)
 - [x] Script beacon Cloudflare terpasang di `index.html` (chunk vendor kembali ramping)
 - [x] Fitur yang didapat: page views, top pages, referrer, negara, perangkat — via dashboard Cloudflare
-- [ ] **LANGKAH ANDA (dapatkan token, ±5 menit):**
-  1. Daftar/login gratis di [dash.cloudflare.com](https://dash.cloudflare.com) (tidak perlu punya domain di Cloudflare)
-  2. Menu kiri: **Analytics & Logs → Web Analytics** (atau "RUM") → **Add a site**
-  3. Masukkan `djul-dev.vercel.app` → Cloudflare menampilkan **JS snippet berisi token**
-  4. Copy token-nya, lalu ganti tulisan `GANTI_DENGAN_TOKEN_CLOUDFLARE` di file `index.html` (baris ~45)
-  5. Commit & push → data mulai terkumpul, lihat di dashboard Cloudflare
-- **Catatan:** Beacon menampilkan data pengunjung nyata termasuk kecepatan site dari sisi pengunjung. Tidak memperlambat website (script `defer`, ~1 kB).
+- [x] **Token terpasang** di `index.html` (commit `85eec02`) — analytics **AKTIF** ✅
+- **Catatan:** Beacon menampilkan data pengunjung nyata termasuk kecepatan site dari sisi pengunjung. Tidak memperlambat website (script `defer`/module, ~1 kB).
+- **Cara cek:** buka [djul-dev.vercel.app](https://djul-dev.vercel.app/) → tunggu 1–2 menit → dashboard Cloudflare **Web Analytics** mulai menampilkan data (kunjungan pertama mungkin butuh beberapa menit untuk muncul).
 
 ---
 
@@ -116,7 +112,7 @@ SPA Vue hampir pasti lemah di SEO. Yang sudah dikerjakan:
 | - | #1 Download CV | ⏸️ Ditunda (keputusan: keamanan data; opsi A+B saat siap) |
 | - | #3 SEO & Meta tags | ✅ Selesai (`index.html`, `router/index.js`, `robots.txt`, `sitemap.xml`) |
 | - | Domain final dikonfirmasi: `https://djul-dev.vercel.app/` | ✅ Semua 13 referensi (5 file) diganti dari domain lama; README Live Demo ikut diperbarui |
-| - | #5 Analytics | ✅ Beralih ke Cloudflare Web Analytics (gratis) — beacon terpasang, menunggu token dari Anda |
+| - | #5 Analytics | ✅ **AKTIF** — Cloudflare Web Analytics, token terpasang & live |
 | - | Icon LinkedIn | ✅ Ditambahkan di sidebar social desktop (`App.vue`) + baris social halaman Contact (`ContactView.vue`), mengarah ke profil LinkedIn pribadi — diposisikan paling depan |
 | - | #4 Konten Portfolio | ⏸️ Ditunda — menunggu aset visual dari pemilik |
 | - | #6 Analytics | ⬜ Belum |
