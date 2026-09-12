@@ -116,6 +116,7 @@ Manfaat: tahu jumlah pengunjung, halaman terpopuler, referrer (dari mana pengunj
 | - | #3 SEO & Meta tags | ✅ Selesai (`index.html`, `router/index.js`, `robots.txt`, `sitemap.xml`) |
 | - | Domain final dikonfirmasi: `https://djul-dev.vercel.app/` | ✅ Semua 13 referensi (5 file) diganti dari domain lama; README Live Demo ikut diperbarui |
 | - | #5 Vercel Analytics | ✅ Kode selesai (`src/main.js` + `@vercel/analytics`) — menunggu klik "Enable" di dashboard Vercel |
+| - | Icon LinkedIn | ✅ Ditambahkan di sidebar social desktop (`App.vue`) + baris social halaman Contact (`ContactView.vue`), mengarah ke profil LinkedIn pribadi — diposisikan paling depan |
 | - | #4 Konten Portfolio | ⏸️ Ditunda — menunggu aset visual dari pemilik |
 | - | #6 Analytics | ⬜ Belum |
 
