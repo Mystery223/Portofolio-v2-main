@@ -15,7 +15,7 @@ export default {
         {
           id: 1,
           name: 'Absensi Mahasiswa',
-          imageUrl: 'absensi',
+          imageUrl: 'granita',
           status: 'A mobile application for student attendance tracking using Flutter.',
           tech: 'Flutter, Dart, PostgreSQL',
           github: 'https://github.com/Mystery223/Absensi-mahasiswa',
@@ -24,7 +24,7 @@ export default {
         {
           id: 2,
           name: 'Personal Finance Tracker',
-          imageUrl: 'finance',
+          imageUrl: 'granita',
           status: 'A web-based application to track personal finances, income, and expenses.',
           tech: 'Python, Flask, HTML5, Vanilla CSS, Chart.js, Jinja2', 
           github: 'https://github.com/Mystery223/Personal-Finance-Tracker',
@@ -33,7 +33,7 @@ export default {
         {
           id: 3,
           name: 'Company Profile',
-          imageUrl: 'company',
+          imageUrl: 'granita',
           status: 'A professional corporate website for representing brand identity and services.',
           tech: 'Next.js, React, TailwindCSS, PostgreSQL, Prisma ORM',
           github: 'https://github.com/Mystery223/Company-Profile',
