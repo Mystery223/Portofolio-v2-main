@@ -54,7 +54,7 @@ SPA Vue hampir pasti lemah di SEO. Yang sudah dikerjakan:
 - [x] **`public/sitemap.xml`** dibuat (4 halaman) + `robots.txt` diperbarui menunjuk sitemap yang benar
 - [x] Font preconnect (`fonts.googleapis.com` + `fonts.gstatic.com`) untuk performa load
 - [x] Hapus dependency `@unhead/vue` yang tidak pernah dipakai
-- **Catatan:** Kalau nanti punya custom domain sendiri, cukup ganti domain di 3 file: `index.html`, `robots.txt`, `sitemap.xml` (cari-ganti `djul-dev.vercel.app`).
+- **Catatan:** Domain custom `djulfikri.my.id` sudah dipasang — semua referensi domain di `index.html`, `robots.txt`, `sitemap.xml`, dan README kini mengarah ke `https://djulfikri.my.id/`. Kalau ganti domain lagi, cukup cari-ganti domain di file-file tersebut.
 
 ### 5. Perkaya Halaman About
 - [ ] **Timeline pengalaman** (pendidikan/organisasi/proyek dengan tahun)
@@ -111,7 +111,7 @@ SPA Vue hampir pasti lemah di SEO. Yang sudah dikerjakan:
 | - | #2 Kontras navbar | ✅ Selesai (`src/App.vue`) |
 | - | #1 Download CV | ⏸️ Ditunda (keputusan: keamanan data; opsi A+B saat siap) |
 | - | #3 SEO & Meta tags | ✅ Selesai (`index.html`, `router/index.js`, `robots.txt`, `sitemap.xml`) |
-| - | Domain final dikonfirmasi: `https://djul-dev.vercel.app/` | ✅ Semua 13 referensi (5 file) diganti dari domain lama; README Live Demo ikut diperbarui |
+| - | Domain final dikonfirmasi: `https://djulfikri.my.id/` | ✅ Semua referensi domain diganti dari `djul-dev.vercel.app` ke domain pribadi; README Live Demo ikut diperbarui |
 | - | #5 Analytics | ✅ **AKTIF** — Cloudflare Web Analytics, token terpasang & live |
 | - | Icon LinkedIn | ✅ Ditambahkan di sidebar social desktop (`App.vue`) + baris social halaman Contact (`ContactView.vue`), mengarah ke profil LinkedIn pribadi — diposisikan paling depan |
 | - | #4 Konten Portfolio | ⏸️ Ditunda — menunggu aset visual dari pemilik |

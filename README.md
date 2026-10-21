@@ -3,7 +3,7 @@
 Personal portfolio website built with Vue.js 3, Vite, and Tailwind CSS. This project showcases my journey as a Fullstack Developer, featuring past project experiences and a professional contact interface.
 
 ## 🚀 Live Demo
-**[https://djul-dev.vercel.app/](https://djul-dev.vercel.app/)**
+**[https://djulfikri.my.id/](https://djulfikri.my.id/)**
 
 ## 🛡️ Deployment Verification
 The project has been successfully deployed and verified on Vercel.
