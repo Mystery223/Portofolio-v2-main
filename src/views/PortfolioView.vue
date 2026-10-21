@@ -1,5 +1,10 @@
 <script>
+import { t } from '../i18n';
+
 export default {
+  methods: {
+    t
+  },
   mounted() {
     document.title = 'Portfolio | Djul Fikri Ferdiansyah';
   },
@@ -45,9 +50,9 @@ export default {
       <header>
         <div
           class="text-2xl font-bold text-white mb-10 fadein-bot title-section flex items-center justify-center flex-col">
-          <h4>Past Project Experience</h4>
+          <h4>{{ t('portfolio.title') }}</h4>
           <h4 class="text-base font-normal text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-primary">
-            Explore the projects I've worked on so far</h4>
+            {{ t('portfolio.subtitle') }}</h4>
         </div>
       </header>
       <section>
@@ -64,7 +69,7 @@ export default {
                   <div class="title-text font-medium text-secondary">{{ item.name }}
                   </div>
                   <div class="w-full text-left text-[10px] text-[#c1c1c1] md:text-xs lg:text-sm">
-                    {{ item.status }}</div>
+                    {{ t('portfolio.projects.' + item.id) }}</div>
                   <div class="w-full mt-4 text-normal text-sm text-left text-primary">
                     {{ item.tech }}
                   </div>
@@ -72,7 +77,7 @@ export default {
                     <div class="flex cursor-pointer items-end gap-2 text-primary">
                       <a v-if="item.github !== 'null'"
                         :href="item.github" target="_blank" rel="noreferrer"
-                        title="View github repository" class="transition-all hover:text-accent">
+                        :title="t('portfolio.viewGithub')" class="transition-all hover:text-accent">
                         <svg stroke="currentColor"
                           fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
                           height="16" width="16" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +86,7 @@ export default {
                           </path>
                         </svg></a>
                         <a v-if="item.demo !== 'null'" :href="item.demo" target="_blank" rel="noreferrer"
-                        title="View finished project" class="transition-all hover:text-accent">
+                        :title="t('portfolio.viewDemo')" class="transition-all hover:text-accent">
                         <svg stroke="currentColor"
                           fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
                           height="18" width="18" xmlns="http://www.w3.org/2000/svg">

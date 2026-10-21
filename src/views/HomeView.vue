@@ -2,7 +2,7 @@
   <main
     class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
     <div class="space-y-4 text-center md:text-left px-10">
-      <p class="text-primary font-mono tracking-widest uppercase text-sm fadein-up">Welcome to my universe</p>
+      <p class="text-primary font-mono tracking-widest uppercase text-sm fadein-up">{{ t('home.welcome') }}</p>
       <h1 class="text-4xl font-bold md:text-6xl text-white fadein-up">Djul Fikri Ferdiansyah</h1>
       <div class="py-2">
         <h1
@@ -11,16 +11,14 @@
           <span class="wrap">{{ txt }}</span>
         </h1>
       </div>
-      <p class="text-slate-400 max-w-lg mx-auto md:mx-0 fade-in-from-left leading-relaxed">
-        Passionate about crafting <span class="text-white">beautiful digital experiences</span> through code. Based in Indonesia, exploring the boundaries of the digital world. 👋🏼
-      </p>
+      <p class="text-slate-400 max-w-lg mx-auto md:mx-0 fade-in-from-left leading-relaxed" v-html="t('home.tagline')"></p>
       
       <div class="pt-6 fadein-up animation-delay-500">
         <button @click="downloadCV" class="group relative px-8 py-3 font-bold text-white transition-all duration-300">
           <span class="absolute inset-0 border border-primary/50 group-hover:border-primary transition-colors"></span>
           <span class="absolute inset-0 bg-primary/10 group-hover:bg-primary/20 transition-all scale-x-0 group-hover:scale-x-100 origin-left"></span>
           <span class="relative flex items-center gap-2">
-            Download CV
+            {{ t('home.downloadCv') }}
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-y-1"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           </span>
         </button>
@@ -39,17 +37,22 @@
 
 <script>
 import Swal from 'sweetalert2';
+import { t } from '../i18n';
 
 export default {
   name: 'HomeView',
   data() {
     return {
-      toRotate: ["Fullstack Explorer", "Digital Artisan", "Creative Problem Solver", "Engineering Enthusiast"],
       period: 2000,
       txt: '',
       loopNum: 0,
       isDeleting: false,
     };
+  },
+  computed: {
+    toRotate() {
+      return t('home.roles');
+    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -57,6 +60,7 @@ export default {
     });
   },
   methods: {
+    t,
     tick() {
       let typewriter = this.$refs.typewriter;
 
@@ -92,13 +96,13 @@ export default {
     },
     downloadCV() {
       Swal.fire({
-        title: '<span style="color: #22d3ee; font-family: Poppins, sans-serif;">System Notification</span>',
-        html: '<span style="color: #cbd5e1; font-family: Poppins, sans-serif;">CV link coming soon! Please reach out to me via the <b>Contact</b> menu for now.</span>',
+        title: `<span style="color: #22d3ee; font-family: Poppins, sans-serif;">${t('home.cvTitle')}</span>`,
+        html: `<span style="color: #cbd5e1; font-family: Poppins, sans-serif;">${t('home.cvMessage')}</span>`,
         icon: 'info',
         background: '#1e1e1f',
         iconColor: '#22d3ee',
         showConfirmButton: true,
-        confirmButtonText: 'Understood',
+        confirmButtonText: t('home.cvOk'),
         confirmButtonColor: '#22d3ee',
         backdrop: `rgba(0,0,0,0.8)`,
         customClass: {

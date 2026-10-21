@@ -1,5 +1,10 @@
 <script>
+import { t } from '../i18n';
+
 export default {
+  methods: {
+    t
+  },
   mounted() {
     document.title = 'About | Djul Fikri Ferdiansyah';
   },
@@ -113,7 +118,7 @@ export default {
 
         <header>
           <div class="text-2xl font-bold text-white mb-10 fadein-bot title-section flex items-center">
-            About Me &nbsp;
+            {{ t('about.title') }} &nbsp;
             <div class="h-[1px] w-32 bg-primary md:w-96"
               data-aos-duration="600"></div>
           </div>
@@ -130,20 +135,13 @@ export default {
           </div>
           <div class="md:w-8/12 border-l-0 md:border-l-2 border-primary/20 md:pl-10 relative">
             <h2 class="text-xl md:text-3xl font-bold text-white mb-6 fadein-left fadeins-1 italic tracking-tight">
-              <span class="text-primary uppercase drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">The Story Behind</span>
-              <span class="uppercase ml-2">Every Code</span>
+              <span class="text-primary uppercase drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">{{ t('about.story1') }}</span>
+              <span class="uppercase ml-2">{{ t('about.story2') }}</span>
             </h2>
             <div class="space-y-4 md:space-y-6 text-sm md:text-base lg:text-lg leading-relaxed text-slate-300">
-              <p class="fadein-left fadeins-1">
-                Hello! I am a developer who believes that the best kind of technology
-                is the one that possesses <span class="text-primary font-medium">'soul'</span>.
-              </p>
-              <p class="fadein-left fadeins-2">
-                My fascination with the digital world began with a simple curiosity: <span class="italic text-white/90">how does it all work?</span> That spark of inquiry is what led me to my current career—transforming complex problems into elegant solutions. To me, code is more than just lines of instructions; it is an instrument for creating meaningful user experiences.
-              </p>
-              <p class="fadein-left fadeins-3">
-                From building large-scale platforms to designing minimalist personal blogs, my focus remains the same: meticulous attention to detail and a commitment to quality. <span class="text-white font-semibold">I don't just build products; I build unforgettable experiences.</span>
-              </p>
+              <p class="fadein-left fadeins-1" v-html="t('about.bio1')"></p>
+              <p class="fadein-left fadeins-2" v-html="t('about.bio2')"></p>
+              <p class="fadein-left fadeins-3" v-html="t('about.bio3')"></p>
             </div>
           </div>
         </section>
@@ -157,7 +155,7 @@ export default {
           <div class="text-2xl font-bold text-white mb-5 fadein-bot title-section flex items-center">
             <div class="h-[1px] w-10 bg-primary md:w-20"
               data-aos-duration="600"></div>
-            &nbsp; Skills
+            &nbsp; {{ t('about.skills') }}
           </div>
         </header>
         <section>
@@ -165,11 +163,11 @@ export default {
             <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400 mb-5">
               <li class="mr-2">
                 <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
-                  :class="{ 'text-primary bg-primary bg-opacity-10': activeTab === 1 }" @click="activeTab = 1">Tech Stack</button>
+                  :class="{ 'text-primary bg-primary bg-opacity-10': activeTab === 1 }" @click="activeTab = 1">{{ t('about.techTab') }}</button>
               </li>
               <li class="mr-2">
                 <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
-                  :class="{ 'text-primary bg-primary bg-opacity-10': activeTab === 2 }" @click="activeTab = 2">Tools</button>
+                  :class="{ 'text-primary bg-primary bg-opacity-10': activeTab === 2 }" @click="activeTab = 2">{{ t('about.toolsTab') }}</button>
               </li>
             </ul>
           </div>
@@ -188,7 +186,7 @@ export default {
                     </div>
                     <div
                       class="status-tech opacity-0 absolute mt-5 text-[10px] text-primary transition-all duration-300 md:text-xs lg:text-sm">
-                      {{ item.status }}</div>
+                      {{ t('status.' + item.status) }}</div>
                   </div>
                 </div>
               </div>
@@ -209,7 +207,7 @@ export default {
                     </div>
                     <div
                       class="status-tech opacity-0 absolute mt-5 text-[10px] text-primary transition-all duration-300 md:text-xs lg:text-sm">
-                      {{ item.status }}</div>
+                      {{ t('status.' + item.status) }}</div>
                   </div>
                 </div>
               </div>

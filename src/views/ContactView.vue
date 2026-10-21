@@ -1,5 +1,6 @@
 <script>
 import emailjs from '@emailjs/browser'
+import { t } from '../i18n'
 
 export default {
   mounted() {
@@ -18,9 +19,10 @@ export default {
     }
   },
   methods: {
+    t,
     async sendEmail() {
       if (!this.form.name || !this.form.email || !this.form.message) {
-        this.error = 'Please fill in all fields.';
+        this.error = t('contact.errRequired');
         return;
       }
 
@@ -45,9 +47,9 @@ export default {
         this.form = { name: '', email: '', message: '' };
       } catch (err) {
         if (err && err.text) {
-          this.error = `Error: ${err.text}. Please check your credentials.`;
+          this.error = t('contact.errCredentials').replace('{msg}', err.text);
         } else {
-          this.error = 'Failed to send message. Please try again later.';
+          this.error = t('contact.errFailed');
         }
         console.error('EmailJS Error Detail:', err);
       } finally {
@@ -66,8 +68,8 @@ export default {
   <div class="container mx-auto p-3 md:p-8">
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-10">
-        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h1>
-        <p class="text-slate-400">Have a question or want to work together? Feel free to reach out!</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">{{ t('contact.title') }}</h1>
+        <p class="text-slate-400">{{ t('contact.subtitle') }}</p>
         <div class="h-[2px] w-20 mx-auto mt-6 bg-primary"></div>
       </div>
 
@@ -75,10 +77,10 @@ export default {
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 mx-auto text-green-400 mb-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
         </svg>
-        <h3 class="text-xl font-semibold text-green-400 mb-2">Message Sent!</h3>
-        <p class="text-slate-300 mb-6">Thank you for reaching out. I'll get back to you soon!</p>
+        <h3 class="text-xl font-semibold text-green-400 mb-2">{{ t('contact.sentTitle') }}</h3>
+        <p class="text-slate-300 mb-6">{{ t('contact.sentText') }}</p>
         <button @click="resetForm" class="px-6 py-2 bg-primary text-black font-semibold rounded-lg hover:bg-primary/80 transition-colors">
-          Send Another Message
+          {{ t('contact.sendAnother') }}
         </button>
       </div>
 
@@ -87,34 +89,34 @@ export default {
           {{ error }}
         </div>
         <div class="mb-6">
-          <label for="name" class="block text-slate-300 text-sm font-medium mb-2">Your Name</label>
+          <label for="name" class="block text-slate-300 text-sm font-medium mb-2">{{ t('contact.name') }}</label>
           <input 
             type="text" 
             id="name"
             v-model="form.name"
-            placeholder="John Doe"
+            :placeholder="t('contact.namePlaceholder')"
             class="w-full bg-[#121212] border border-[#383838] rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-primary transition-colors"
           >
         </div>
 
         <div class="mb-6">
-          <label for="email" class="block text-slate-300 text-sm font-medium mb-2">Your Email</label>
+          <label for="email" class="block text-slate-300 text-sm font-medium mb-2">{{ t('contact.email') }}</label>
           <input 
             type="email" 
             id="email"
             v-model="form.email"
-            placeholder="john@example.com"
+            :placeholder="t('contact.emailPlaceholder')"
             class="w-full bg-[#121212] border border-[#383838] rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-primary transition-colors"
           >
         </div>
 
         <div class="mb-6">
-          <label for="message" class="block text-slate-300 text-sm font-medium mb-2">Message</label>
+          <label for="message" class="block text-slate-300 text-sm font-medium mb-2">{{ t('contact.message') }}</label>
           <textarea 
             id="message"
             v-model="form.message"
             rows="5"
-            placeholder="Your message here..."
+            :placeholder="t('contact.messagePlaceholder')"
             class="w-full bg-[#121212] border border-[#383838] rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-primary transition-colors resize-none"
           ></textarea>
         </div>
@@ -124,8 +126,8 @@ export default {
           :disabled="isLoading"
           class="w-full bg-gradient-to-r from-primary to-secondary text-black font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
-          <span v-if="isLoading">Sending...</span>
-          <span v-else>Send Message</span>
+          <span v-if="isLoading">{{ t('contact.sending') }}</span>
+          <span v-else>{{ t('contact.send') }}</span>
           <svg v-if="!isLoading" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
           </svg>

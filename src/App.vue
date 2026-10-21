@@ -11,27 +11,32 @@
         <button @click="redirectToHome" class="flex">
           <span class="self-center text-lg text-[#22d3ee] font-semibold whitespace-nowrap fadein-bot hover:text-cyan-100">PORTOFOLIO</span>
         </button>
-        <div class="flex md:order-2 fadein-bot">
-          <div class="w-10"></div>
+        <div class="flex md:order-2 fadein-bot items-center">
+          <button @click="toggleLang" :aria-label="t('langLabel')" :title="t('langLabel')"
+            class="px-3 py-1.5 rounded-full border border-[#383838] bg-[#121212]/60 text-xs font-semibold tracking-wide hover:border-primary transition-colors">
+            <span :class="lang === 'en' ? 'text-primary' : 'text-slate-500'">EN</span>
+            <span class="text-slate-600 mx-0.5">|</span>
+            <span :class="lang === 'id' ? 'text-primary' : 'text-slate-500'">ID</span>
+          </button>
         </div>
         <div class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1" id="mobile-menu-3">
           <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
             <li>
               <router-link to="/"
                 class="fadein-bot text-slate-300 hover:bg-white/5 hover:text-white border-b border-gray-800 block pl-3 pr-4 py-2 md:hover:bg-transparent md:border-0 md:p-0"
-                aria-current="page">Home</router-link>
+                aria-current="page">{{ t('nav.home') }}</router-link>
             </li>
             <li>
               <router-link to="/about"
-                class="fadein-bot fadein-1 text-slate-300 hover:bg-white/5 hover:text-white border-b border-gray-800 block pl-3 pr-4 py-2 md:hover:bg-transparent md:border-0 md:p-0">About</router-link>
+                class="fadein-bot fadein-1 text-slate-300 hover:bg-white/5 hover:text-white border-b border-gray-800 block pl-3 pr-4 py-2 md:hover:bg-transparent md:border-0 md:p-0">{{ t('nav.about') }}</router-link>
             </li>
             <li>
               <router-link to="/portfolio"
-                class="fadein-bot fadein-2 text-slate-300 hover:bg-white/5 hover:text-white border-b border-gray-800 block pl-3 pr-4 py-2 md:hover:bg-transparent md:border-0 md:p-0">Portofolio</router-link>
+                class="fadein-bot fadein-2 text-slate-300 hover:bg-white/5 hover:text-white border-b border-gray-800 block pl-3 pr-4 py-2 md:hover:bg-transparent md:border-0 md:p-0">{{ t('nav.portfolio') }}</router-link>
             </li>
             <li>
               <router-link to="/contact"
-                class="fadein-bot fadein-3 text-slate-300 hover:bg-white/5 hover:text-white border-b border-gray-800 block pl-3 pr-4 py-2 md:hover:bg-transparent md:border-0 md:p-0">Contact</router-link>
+                class="fadein-bot fadein-3 text-slate-300 hover:bg-white/5 hover:text-white border-b border-gray-800 block pl-3 pr-4 py-2 md:hover:bg-transparent md:border-0 md:p-0">{{ t('nav.contact') }}</router-link>
             </li>
           </ul>
         </div>
@@ -49,10 +54,10 @@
 
   <footer class="block md:hidden fixed bottom-0 left-0 right-0 rounded-t-3xl border border-[#383838] bg-[#121212] bg-opacity-80 backdrop-blur-md backdrop-opacity-90 z-50">
   <nav class="flex justify-around py-4 text-xs">
-    <router-link to="/" class="text-gray-300 hover:text-white">Home</router-link>
-    <router-link to="/about" class="text-gray-300 hover:text-white">About</router-link>
-    <router-link to="/portfolio" class="text-gray-300 hover:text-white">Portofolio</router-link>
-    <router-link to="/contact" class="text-gray-300 hover:text-white">Contact</router-link>
+    <router-link to="/" class="text-gray-300 hover:text-white">{{ t('nav.home') }}</router-link>
+    <router-link to="/about" class="text-gray-300 hover:text-white">{{ t('nav.about') }}</router-link>
+    <router-link to="/portfolio" class="text-gray-300 hover:text-white">{{ t('nav.portfolio') }}</router-link>
+    <router-link to="/contact" class="text-gray-300 hover:text-white">{{ t('nav.contact') }}</router-link>
   </nav>
 </footer>
 
@@ -73,8 +78,17 @@
 </template>
 
 <script>
+import { t, lang, toggleLang } from './i18n';
+
 export default {
+  computed: {
+    lang() {
+      return lang.value;
+    }
+  },
   methods: {
+    t,
+    toggleLang,
     redirectToHome() {
       this.$router.push('/')
     }
