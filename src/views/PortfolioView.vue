@@ -35,9 +35,27 @@ export default {
           name: 'Company Profile',
           imageUrl: 'company',
           status: 'A professional corporate website for representing brand identity and services.',
-          tech: 'Next.js, React, TailwindCSS, PostgreSQL, Prisma ORM', 
+          tech: 'Next.js, React, TailwindCSS, PostgreSQL, Prisma ORM',
           github: 'https://github.com/Mystery223/Company-Profile',
           demo: 'null'
+        },
+        {
+          id: 4,
+          name: 'Granit Kendan Jaya',
+          imageUrl: 'granita',
+          status: 'A premium granite company landing page with product catalog, project showcase, testimonials, and consultation flow.',
+          tech: 'Next.js, React, TailwindCSS 4, Framer Motion, Nodemailer',
+          github: 'https://github.com/Mystery223/Granitastone',
+          demo: 'https://granitastone.vercel.app/'
+        },
+        {
+          id: 5,
+          name: 'Kareshi Optik',
+          imageUrl: 'kareshi',
+          status: 'An editorial-style optical store landing page with curated collections, eye care services, and appointment booking.',
+          tech: 'Next.js, React, TailwindCSS 4, Drizzle ORM, PostgreSQL, NextAuth',
+          github: 'https://github.com/Mystery223/kareshi-optik',
+          demo: 'https://kareshi-optik.vercel.app/'
         }
       ]
     };

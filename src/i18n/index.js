@@ -42,7 +42,9 @@ const messages = {
       projects: {
         1: 'A mobile application for student attendance tracking using Flutter.',
         2: 'A web-based application to track personal finances, income, and expenses.',
-        3: 'A professional corporate website for representing brand identity and services.'
+        3: 'A professional corporate website for representing brand identity and services.',
+        4: 'A premium granite company landing page with product catalog, project showcase, testimonials, and consultation flow.',
+        5: 'An editorial-style optical store landing page with curated collections, eye care services, and appointment booking.'
       }
     },
     contact: {
@@ -110,7 +112,9 @@ const messages = {
       projects: {
         1: 'Aplikasi mobile untuk pencatatan kehadiran mahasiswa menggunakan Flutter.',
         2: 'Aplikasi web untuk melacak keuangan pribadi, pemasukan, dan pengeluaran.',
-        3: 'Website korporat profesional untuk menampilkan identitas dan layanan merek.'
+        3: 'Website korporat profesional untuk menampilkan identitas dan layanan merek.',
+        4: 'Landing page perusahaan batu granit premium dengan katalog produk, portofolio proyek, testimoni, dan alur konsultasi.',
+        5: 'Landing page toko optik bergaya editorial dengan koleksi terkurasi, layanan periksa mata, dan booking janji temu.'
       }
     },
     contact: {
